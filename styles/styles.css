@@ -1,0 +1,14 @@
+#container {
+
+}
+
+.cell {
+    border-style: solid;
+    border-color: black;
+    width: 6.25vw;
+    height: 6.25vh;
+}
+
+.row {
+    display: flex;
+}
