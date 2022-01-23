@@ -1,11 +1,8 @@
 const container = document.querySelector('#container');
-//const cell = document.createElement('div');
 
-// for(let i = 1; i <= 16; i++) {
-//     let cell = document.createElement('div');
-//     cell.classList.add('cell');
-//     container.appendChild(cell);
-// }
+function shadeCell (cell) {
+    this.classList.add('shaded');
+}
 
 for(let i = 1; i <= 16; i++) {
     let row = document.createElement('div');
@@ -18,3 +15,8 @@ for(let i = 1; i <= 16; i++) {
         row.appendChild(cell);
     }
 }
+
+const cells = document.querySelectorAll('.cell');
+cells.forEach(cell => cell.addEventListener('mouseover', shadeCell));
+
+

@@ -12,3 +12,7 @@
 .row {
     display: flex;
 }
+
+.shaded {
+    background-color: coral;
+}
