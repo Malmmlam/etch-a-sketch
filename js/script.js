@@ -9,8 +9,22 @@ function play (gridSize) {
     getUserShading();
 }
 
+function randomColor() {
+    let maxVal = 0xFFFFFF;
+    let randomNumber = Math.floor(Math.random() * maxVal);
+    randomNumber = randomNumber.toString(16);
+    let randomColor = randomNumber.padStart(6,0);  
+    return `#${randomColor.toUpperCase()}`;
+}
+
 function shadeCell (cell) {
     this.classList.add('shaded');
+    this.style.background = randomColor();
+
+    //this makes all cells change color everytime the mouse moves. 
+    // let shadedCells = document.querySelectorAll('.shaded');
+    // shadedCells.forEach(shadedCell => 
+    //     shadedCell.style.background = randomColor());
 }
 
 function reset () {
